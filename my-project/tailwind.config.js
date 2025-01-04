@@ -1,0 +1,26 @@
+/** @type {import('tailwindcss').Config} */
+const {nextui} = require("@nextui-org/react");
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        'Red-Hat': ['"Red Hat Display", serif'],
+      },
+  
+
+
+      boxShadow: {
+       hero: ' 0px 4px 3px 0px #00000040',
+      },
+    },
+  },
+  darkMode: "class",
+  plugins: [nextui()],
+
+}
+
