@@ -1,7 +1,7 @@
 import { moodData } from "../assets/asset";
 const MoodImg = () => {
   return (
-    <section className="w-full h-[550px] md:h-[767px]">
+    <section className="w-full h-[550px] lg:h-[700px]">
         <h1 className="text-2xl lg:text-[42px] font-bold text-center text-[#26395C] leading-[54px] mt-12">What are you in the mood for?</h1>
         <div className="max-w-[327px] sm:max-w-[1240px] h-[458px] sm:h-[583px] sm:ps-[50px] md:px-[100px] pt-8 grid grid-cols-2 sm:grid-cols-4  mx-auto">
             {moodData.map((item, i)=>(
