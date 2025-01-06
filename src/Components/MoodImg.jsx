@@ -12,7 +12,7 @@ const MoodImg = () => {
                              
                   </div>
             ))}
-        
+                    
         </div>
     </section>
   )

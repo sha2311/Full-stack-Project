@@ -1,8 +1,10 @@
 import './App.css'
+import Chillsbay from './Components/Chillsbay'
 import Hero from './Components/Hero'
 import MoodImg from './Components/MoodImg'
 import Navbarmenu from './Components/Navbar'
 import ToDoCatalog from './Components/ToDoCatalog'
+import Gallary from './Components/Gallary'
 
 function App() {
  
@@ -13,7 +15,8 @@ function App() {
      <Hero/>
      <MoodImg/>
      <ToDoCatalog/>
-
+     <Chillsbay/>
+     <Gallary/>
     </main>
   )
 }
