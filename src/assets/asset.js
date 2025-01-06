@@ -17,12 +17,22 @@ import gallary3 from '../assets/g3.png'
 import gallary4 from '../assets/g4.png'
 import gallary5 from '../assets/g5.png'
 import gallary6 from '../assets/g6.png'
+import slider1 from '../assets/slider.png'
+import calendar from '../assets/Calendar.png'
+import mark from '../assets/Mark.png'
+import clock from '../assets/Clock.png'
+import tag from '../assets/Tag.png'
+import twitter from '../assets/Twitter.png'
+import instragram from '../assets/Instagram.png'
 
  export const asset ={
 
     logo,
     shopping,
     hero,
+    slider1,
+    twitter,
+    instragram
     
 
  }
@@ -74,3 +84,26 @@ import gallary6 from '../assets/g6.png'
   {img: gallary5 },
   {img: gallary6 },
  ]
+
+export const TagData = [
+  {
+    id: 1,
+    img: calendar,
+    title: "Dec 12 2024",
+  },
+  {
+    id: 2,
+    img: mark,
+    title: "TBS  Lagos",
+  },
+  {
+    id: 3,
+    img: clock,
+    title: "9:00 PM",
+  },
+  {
+    id: 4,
+    img: tag,
+    title: "N20,000",
+  },
+];

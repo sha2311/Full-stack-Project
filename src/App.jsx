@@ -5,6 +5,7 @@ import MoodImg from './Components/MoodImg'
 import Navbarmenu from './Components/Navbar'
 import ToDoCatalog from './Components/ToDoCatalog'
 import Gallary from './Components/Gallary'
+import Carusol from './Components/Carusol'
 
 function App() {
  
@@ -16,6 +17,7 @@ function App() {
      <MoodImg/>
      <ToDoCatalog/>
      <Chillsbay/>
+     <Carusol/>
      <Gallary/>
     </main>
   )

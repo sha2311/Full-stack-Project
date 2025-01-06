@@ -3,13 +3,13 @@ import { ChillsbayData } from "../assets/asset";
 
 const Chillsbay = () => {
   return (
-    <section className="h-auto lg:h-[653px]">
-      <h1 className="text-2xl lg:text-[42px] font-bold text-center text-[#26395C] leading-[42px] mt-16">
+    <section className="h-auto lg:h-[653px] ">
+      <h1 className="text-2xl  lg:text-[42px] font-bold text-center text-[#26395C] leading-[42px] mt-16">
         Why Use Chillsbay?
       </h1>
 
-      <div className="w-full lg:max-w-[1240px] lg:h-[453px] bg-[#F5FAFF]  sm:px-[50px] lg:px-[100px] mt-10 ">
-        <div className=" container grid grid-cols-1 lg:grid-cols-3 mx-auto pt-[62px] pb-[57px] rounded-2xl ">
+      <div className="w-full lg:max-w-[1240px] lg:h-[453px]   sm:px-[50px] lg:px-[100px] pt-10  ">
+        <div className=" container bg-[#F5FAFF] grid grid-cols-1 lg:grid-cols-3 mx-auto pt-[62px] pb-[57px] rounded-2xl  shadow-chillbay ">
           {ChillsbayData.map((item, i) => (
             <div key={i} className="">
               <img
