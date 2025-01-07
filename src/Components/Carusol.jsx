@@ -44,7 +44,7 @@ const Carusol = () => {
 
   const carosolSlider = CarouselData[currentIndex];
   return (
-    <section className="w-full lg:w-full h-[995px] lg:h-[950px] mb-5 lg:mb-0 mx-auto">
+    <section className="w-full lg:w-full h-[995px] lg:h-[950px] lg:mb-0 mx-auto">
       <h1 className="text-2xl mt-6 lg:mt-0 lg:text-[42px] font-bold text-center leading-[42px] text-[#26395C]">
         See How People are Chilling On Chillsbay
       </h1>
