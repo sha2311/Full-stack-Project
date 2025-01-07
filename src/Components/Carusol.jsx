@@ -32,7 +32,7 @@ const Carusol = () => {
 
   const prevhandleClick = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? CarouselData.length - 1 : prevIndex - 1
+      (prevIndex - 1 + CarouselData.length) % CarouselData.length  
     );
   };
 

@@ -24,6 +24,12 @@ import clock from '../assets/Clock.png'
 import tag from '../assets/Tag.png'
 import twitter from '../assets/Twitter.png'
 import instragram from '../assets/Instagram.png'
+import fb from '../assets/fb.png'
+import yt from '../assets/yt.png'
+import tiktok from '../assets/tiktok 1.png'
+import linkdin from '../assets/linkdin.png'
+import patner from '../assets/partner.png'
+
 
  export const asset ={
 
@@ -31,8 +37,14 @@ import instragram from '../assets/Instagram.png'
     shopping,
     hero,
     slider1,
+    fb,
+    instragram,
+    yt,
     twitter,
-    instragram
+    tiktok,
+    linkdin,
+    patner,
+  
     
 
  }
