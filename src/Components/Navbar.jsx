@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { asset } from "../assets/asset";
-import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
+import AccDropdown from "./Home/Dropdown";
+import AccDropModal from "./Home/Modal";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import {
   Button,
   Dropdown,
@@ -8,6 +10,7 @@ import {
   DropdownMenu,
   DropdownTrigger,
   Link,
+  Modal,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -16,6 +19,8 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+
+const value = true;
 
 const Navbarmenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState();
@@ -40,15 +45,23 @@ const Navbarmenu = () => {
       </NavbarContent>
       <NavbarContent className="sm:hidden pr-3">
         <NavbarBrand>
-          <img className="w-[166px] h-[72px] pt-[13px] pb-[14px]" src={asset.logo} alt="" />
+          <img
+            className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
+            src={asset.logo}
+            alt=""
+          />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6 justify-between items-center font-Red-Hat mx-16 cursor-pointer">
         <NavbarBrand>
-          <img src={asset.logo} className="w-[166px] h-[72px] pt-[13px] pb-[14px]" alt="" />
+          <img
+            src={asset.logo}
+            className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
+            alt=""
+          />
         </NavbarBrand>
-        <NavbarItem  >
+        <NavbarItem>
           <Link className="text-black ">Eat & Drink</Link>
         </NavbarItem>
 
@@ -87,19 +100,7 @@ const Navbarmenu = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Dropdown>
-            <DropdownTrigger>
-              <Button variant="none">
-                {" "}
-                <UserIcon className="w-4 h-4 text-gray-500  " /> Account
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="profile">
-              <DropdownItem key="new">New file</DropdownItem>
-              <DropdownItem key="copy">Copy link</DropdownItem>
-              <DropdownItem key="edit">Edit file</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          {value === true ?  <AccDropModal /> : <AccDropdown />}
         </NavbarItem>
         <NavbarItem>
           <Button color="primary">Contact Now</Button>
@@ -107,6 +108,7 @@ const Navbarmenu = () => {
       </NavbarContent>
 
       <div className="lg:hidden">
+
         <NavbarContent className="w-full" justify="end">
           <NavbarItem className=" hidden lg:flex"> </NavbarItem>
           <NavbarItem>
@@ -123,7 +125,16 @@ const Navbarmenu = () => {
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
+
       </div>
+          <button>
+            
+          </button>
+          <Modal>
+
+          </Modal>
+
+
     </Navbar>
   );
 };

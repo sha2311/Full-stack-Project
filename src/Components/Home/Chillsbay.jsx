@@ -1,5 +1,5 @@
 import { div } from "framer-motion/client";
-import { ChillsbayData } from "../assets/asset";
+import { ChillsbayData } from "../../assets/asset";
 
 const Chillsbay = () => {
   return (

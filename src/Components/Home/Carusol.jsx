@@ -1,5 +1,5 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { TagData, asset } from "../assets/asset";
+import { TagData, asset } from "../../assets/asset";
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 

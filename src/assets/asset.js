@@ -29,7 +29,9 @@ import yt from '../assets/yt.png'
 import tiktok from '../assets/tiktok 1.png'
 import linkdin from '../assets/linkdin.png'
 import patner from '../assets/partner.png'
-
+import facebook from '../assets/facebook.png'
+import google from '../assets/google.png'
+import apple from '../assets/apple.png'
 
  export const asset ={
 
@@ -44,8 +46,9 @@ import patner from '../assets/partner.png'
     tiktok,
     linkdin,
     patner,
-  
-    
+    facebook,
+    google,
+    apple 
 
  }
 

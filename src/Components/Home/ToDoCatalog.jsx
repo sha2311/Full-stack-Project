@@ -1,4 +1,4 @@
-import { todoData } from "../assets/asset";
+import { todoData } from "../../assets/asset";
 const ToDoCatalog = () => {
   return (
     <section className="w-full h-full lg:h-[852px] bg-[#F5FAFF] shadow-todo ">

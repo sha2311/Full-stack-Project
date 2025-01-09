@@ -1,4 +1,4 @@
-import { moodData } from "../assets/asset";
+import { moodData } from "../../assets/asset";
 const MoodImg = () => {
   return (
     <section className="w-full h-[550px] lg:h-[700px]">

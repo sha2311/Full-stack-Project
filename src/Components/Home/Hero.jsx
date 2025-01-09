@@ -1,4 +1,4 @@
-import { asset } from "../assets/asset";
+import { asset } from "../../assets/asset";
 import {
   Autocomplete,
   AutocompleteItem,
@@ -9,7 +9,7 @@ import {
 const Hero = () => {
   return (
     <section
-      className="bg-no-repeat max-ww-[1440px] h-[636px] overflow-hidden "
+      className="bg-no-repeat w-full lg:max-w-[1440px] h-[636px] overflow-hidden "
       style={{ backgroundImage: `url(${asset.hero})` }}
     >
       <div className="container w-[84%] mx-auto pt-10">

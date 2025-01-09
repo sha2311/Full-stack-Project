@@ -1,4 +1,4 @@
-import { GallaryImg } from "../assets/asset";
+import { GallaryImg } from "../../assets/asset"
 
 const Gallary = () => {
   return (
