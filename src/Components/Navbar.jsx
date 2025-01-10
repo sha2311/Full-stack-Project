@@ -2,6 +2,7 @@ import { useState } from "react";
 import { asset } from "../assets/asset";
 import AccDropdown from "./Home/Dropdown";
 import AccDropModal from "./Home/Modal";
+import { NavLink } from "react-router";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import {
   Button,
@@ -45,24 +46,28 @@ const Navbarmenu = () => {
       </NavbarContent>
       <NavbarContent className="sm:hidden pr-3">
         <NavbarBrand>
-          <img
+        <NavLink to="/">
+        <img
             className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
             src={asset.logo}
             alt=""
           />
+        </NavLink>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6 justify-between items-center font-Red-Hat mx-16 cursor-pointer">
         <NavbarBrand>
-          <img
+        <NavLink to="/">
+        <img
             src={asset.logo}
             className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
             alt=""
           />
+        </NavLink>
         </NavbarBrand>
         <NavbarItem>
-          <Link className="text-black ">Eat & Drink</Link>
+          <NavLink to="/drink" className="text-black ">Eat & Drink</NavLink>
         </NavbarItem>
 
         <NavbarItem className="ps-6">

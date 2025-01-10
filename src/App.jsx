@@ -2,6 +2,8 @@ import './App.css'
 import Navbarmenu from './Components/Navbar'
 import Footer from './Components/Footer'
 import Homepage from './Components/Home'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DrinkPage from './Components/DrinkPage/DrinkPage';
 
 
 
@@ -9,9 +11,16 @@ import Homepage from './Components/Home'
 function App() {
   return (
     <main className="font-Red-Hat">
-     <Navbarmenu/>
-     <Homepage/>
-     <Footer/>
+       <Router>
+        <Navbarmenu />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+        <Routes>
+          <Route path="/drink" element={<DrinkPage />} />
+        </Routes>
+        <Footer />
+      </Router>
     
     </main>
   )
