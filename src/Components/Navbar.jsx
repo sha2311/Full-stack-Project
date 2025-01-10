@@ -28,10 +28,10 @@ const Navbarmenu = () => {
   const menuItem = [
     { name: "Eat & Drink", path: "/drink" },
     { name: "Club", path: "/" },
-    { name: "Things to do", path: "/" },
-    { name: "Shoping", path: "/" },
-    { name: "Account", path: "/" },
-    { name: "Contact", path: "/" },
+    { name: "Things to do",},
+    { name: "Shoping", },
+    { name: "Account",  },
+    { name: "Contact",},
   ];
   return (
     <Navbar
