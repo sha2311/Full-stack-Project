@@ -123,10 +123,10 @@ const Navbarmenu = () => {
         <NavbarMenu>
           {menuItem.map((item, i) => (
             <NavbarMenuItem key={i}>
-              <Link className="w-full text-gray-800 pt-4 cursor-pointer">
+              <NavLink to='/drink' className="w-full text-gray-800 pt-4 cursor-pointer">
                 {" "}
                 {item}{" "}
-              </Link>
+              </NavLink>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
