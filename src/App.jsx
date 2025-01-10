@@ -15,10 +15,10 @@ function App() {
         <Navbarmenu />
         <Routes>
           <Route path="/" element={<Homepage />} />
-        </Routes>
-        <Routes>
           <Route path="/drink" element={<DrinkPage />} />
         </Routes>
+  
+      
         <Footer />
       </Router>
     
