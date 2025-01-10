@@ -24,15 +24,14 @@ import {
 const value = true;
 
 const Navbarmenu = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuItem = [
-    {name:"Eat & Drink", path: '/drink'},
-    {name:"Club",  path: '/'},
-    {name:"Things to do", path: '/'},
-    {name:"Shoping", path: '/'},
-    {name:"Account", path: '/'},
-    {name:"Contact", path: '/'},
-    
+    { name: "Eat & Drink", path: "/drink" },
+    { name: "Club", path: "/" },
+    { name: "Things to do", path: "/" },
+    { name: "Shoping", path: "/" },
+    { name: "Account", path: "/" },
+    { name: "Contact", path: "/" },
   ];
   return (
     <Navbar
@@ -47,28 +46,30 @@ const Navbarmenu = () => {
       </NavbarContent>
       <NavbarContent className="sm:hidden pr-3">
         <NavbarBrand>
-        <NavLink to="/">
-        <img
-            className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
-            src={asset.logo}
-            alt=""
-          />
-        </NavLink>
+          <NavLink to="/">
+            <img
+              className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
+              src={asset.logo}
+              alt=""
+            />
+          </NavLink>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6 justify-between items-center font-Red-Hat mx-16 cursor-pointer">
         <NavbarBrand>
-        <NavLink to="/">
-        <img
-            src={asset.logo}
-            className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
-            alt=""
-          />
-        </NavLink>
+          <NavLink to="/">
+            <img
+              src={asset.logo}
+              className="w-[166px] h-[72px] pt-[13px] pb-[14px]"
+              alt=""
+            />
+          </NavLink>
         </NavbarBrand>
         <NavbarItem>
-          <NavLink to="/drink" className="text-black ">Eat & Drink</NavLink>
+          <NavLink to="/drink" className="text-black ">
+            Eat & Drink
+          </NavLink>
         </NavbarItem>
 
         <NavbarItem className="ps-6">
@@ -106,7 +107,7 @@ const Navbarmenu = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          {value === true ?  <AccDropModal /> : <AccDropdown />}
+          {value === true ? <AccDropModal /> : <AccDropdown />}
         </NavbarItem>
         <NavbarItem>
           <Button color="primary">Contact Now</Button>
@@ -114,7 +115,6 @@ const Navbarmenu = () => {
       </NavbarContent>
 
       <div className="lg:hidden">
-
         <NavbarContent className="w-full" justify="end">
           <NavbarItem className=" hidden lg:flex"> </NavbarItem>
           <NavbarItem>
@@ -123,24 +123,20 @@ const Navbarmenu = () => {
         </NavbarContent>
         <NavbarMenu>
           {menuItem.map((item, i) => (
-            <NavbarMenuItem  key={i}>
-              <NavLink to={item.path} className="w-full text-gray-800 pt-4 cursor-pointer">
+            <NavbarMenuItem key={i}>
+              <NavLink
+                to={item.path}
+                className="w-full text-gray-800 pt-4 cursor-pointer"
+              >
                 {" "}
                 {item.name}{" "}
               </NavLink>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
-
       </div>
-          <button>
-            
-          </button>
-          <Modal>
-
-          </Modal>
-
-
+      <button></button>
+      <Modal></Modal>
     </Navbar>
   );
 };
