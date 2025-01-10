@@ -26,12 +26,13 @@ const value = true;
 const Navbarmenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState();
   const menuItem = [
-    "Eat & Drink",
-    "Club",
-    "Things to do",
-    "Shoping",
-    "Account",
-    "Contact",
+    {name:"Eat & Drink", path: '/drink'},
+    {name:"Club",  path: '/'},
+    {name:"Things to do", path: '/'},
+    {name:"Shoping", path: '/'},
+    {name:"Account", path: '/'},
+    {name:"Contact", path: '/'},
+    
   ];
   return (
     <Navbar
@@ -122,10 +123,10 @@ const Navbarmenu = () => {
         </NavbarContent>
         <NavbarMenu>
           {menuItem.map((item, i) => (
-            <NavbarMenuItem key={i}>
-              <NavLink to='/drink' className="w-full text-gray-800 pt-4 cursor-pointer">
+            <NavbarMenuItem  key={i}>
+              <NavLink to={item.path} className="w-full text-gray-800 pt-4 cursor-pointer">
                 {" "}
-                {item}{" "}
+                {item.name}{" "}
               </NavLink>
             </NavbarMenuItem>
           ))}
