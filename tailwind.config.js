@@ -10,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         'Red-Hat': ['"Red Hat Display", serif'],
+        'Plus-jakarta': ['"Plus Jakarta Sans", serif'],
       },
   
    

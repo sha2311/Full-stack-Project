@@ -4,7 +4,7 @@ import {
   AutocompleteItem,
   Button,
   Avatar,
-  DateRangePicker,
+  DatePicker,
 } from "@nextui-org/react";
 const Hero = () => {
   return (
@@ -65,16 +65,10 @@ const Hero = () => {
               </Autocomplete>
             </div>
             <div>
-              <Autocomplete
-                label="Date"
-                labelPlacement="outside"
-                placeholder="Date"
-                className="w-[100%]"
-              >
-                <AutocompleteItem>
-                  <DateRangePicker />
-                </AutocompleteItem>
-              </Autocomplete>
+            <DatePicker
+            label="Date"
+            labelPlacement='outside'
+            className="w-[100%] " />
             </div>
             <div>
               <Autocomplete
