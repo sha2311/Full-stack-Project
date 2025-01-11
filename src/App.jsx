@@ -1,9 +1,10 @@
 import './App.css'
 import Navbarmenu from './Components/Navbar'
 import Footer from './Components/Footer'
-import Homepage from './Components/Home'
+import Homepage from './Components/Home/Index'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DrinkPage from './Components/DrinkPage/DrinkPage';
+
 
 
 
@@ -15,10 +16,8 @@ function App() {
         <Navbarmenu />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/drink" element={<DrinkPage />} />
-        </Routes>
-  
-      
+          <Route path="/drink" element={ <DrinkPage/> } />
+        </Routes> 
         <Footer />
       </Router>
     
