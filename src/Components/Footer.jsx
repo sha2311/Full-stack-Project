@@ -76,7 +76,7 @@ const SectionMenum = ({ title, menus }) => {
 const Footer = () => {
   const { socialIcon, sections, patnerSection, logo, copyright } = footerData;
   return (
-    <footer className="mt-48 lg:mt-12 h-[975px] lg:h-auto mx-[50px] lg:mx-12">
+    <footer className="mt-14 lg:mt-12 h-[975px] lg:h-auto mx-[50px] lg:mx-12">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 lg:gap-24 gap-2 ">
         {/* lrft side */}
         <div className="col-span-1 flex flex-col items-center ">
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
         {/* right side */}
-        <div className="grid  grid-cols-1 lg:grid-cols-3  lg:gap-24 ms-auto col-span-3  ">
+        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10  lg:gap-24 mx-auto col-span-3  ">
           {sections.map((section, i) => (
             <SectionMenum key={i} title={section.title} menus={section.menus} />
           ))}

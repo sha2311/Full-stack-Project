@@ -33,6 +33,8 @@ import facebook from '../assets/facebook.png'
 import google from '../assets/google.png'
 import apple from '../assets/apple.png'
 import drinkCaro from '../assets/DrinkCarosel.png'
+import map from '../assets/map.png'
+
 
 
 
@@ -52,7 +54,8 @@ import drinkCaro from '../assets/DrinkCarosel.png'
     facebook,
     google,
     apple ,
-    slider1
+    slider1,
+    map
     
 
  }
