@@ -10,9 +10,9 @@ import {
 
 const FindDrink = () => {
   return (
-    <section className='w-[330px] md:w-full md:h-[216px] mx-auto'>
-         <div className="bg-[#FBFCFF] w-full lg:max-w-[1022px] lg:h-[165px] my-7 px-5 md:px-0 lg:ms-[100px] rounded-lg ">
-                <h2 className='text-2xl md:text-[28px] font-bold md:leading-[48px] text-[#26395C] pt-3 md:px-[30px]'> Find the best places to eat and drink for any occasion</h2>
+    <section className='w-[330px] md:w-full lg:h-[216px] mx-auto'>
+         <div className="bg-[#FBFCFF] w-full lg:max-w-[1022px] lg:h-[165px] my-7 px-5 md:px-10 lg:px-0  lg:ms-[100px] rounded-lg ">
+                <h2 className='text-2xl lg:text-[28px] font-bold md:leading-[48px] text-[#26395C] pt-3 md:px-[30px]'> Find the best places to eat and drink for any occasion</h2>
            <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 lg:px-[30px] pb-7 pt-8 md:pt-3 ">
             <div>
               <Autocomplete
