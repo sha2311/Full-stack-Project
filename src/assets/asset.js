@@ -32,6 +32,8 @@ import patner from '../assets/partner.png'
 import facebook from '../assets/facebook.png'
 import google from '../assets/google.png'
 import apple from '../assets/apple.png'
+import drinkCaro from '../assets/DrinkCarosel.png'
+
 
 
 
@@ -40,7 +42,6 @@ import apple from '../assets/apple.png'
     logo,
     shopping,
     hero,
-    slider1,
     fb,
     instragram,
     yt,
@@ -51,6 +52,7 @@ import apple from '../assets/apple.png'
     facebook,
     google,
     apple ,
+    slider1
     
 
  }
@@ -125,3 +127,45 @@ export const TagData = [
     title: "N20,000",
   },
 ];
+
+ export const CarouselData = [
+    {
+      id: 1,
+      image: slider1,
+      heading: "Wizkid made in lagos tour",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    },
+    {
+      id: 2,
+      image: slider1,
+      heading: "Inside Wizkid’s Made in Lagos Tour",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    },
+    {
+      id: 3,
+      image: slider1,
+      heading: "Wizkid’s Made in Lagos Tour: Memories",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    },
+  ];
+
+ export const drinkData = [
+    {
+      id: 1,
+      image: drinkCaro,
+      heading: "GTCO Food and Drink Festival 2022: Africa’s Biggest Food and Drink Festival",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+    },
+    {
+      id: 2,
+      image: drinkCaro,
+      heading: "Highlights of the GTCO Food and Drink Festival 2022: Culinary Excellence Meets Culture",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    },
+    {
+      id: 3,
+      image: drinkCaro,
+      heading: "Exploring Innovation and Trends at the GTCO Food and Drink Festival 2022",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+  ];

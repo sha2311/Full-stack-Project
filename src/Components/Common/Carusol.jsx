@@ -3,27 +3,8 @@ import { TagData, asset } from "../../assets/asset";
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 
-const Carusol = () => {
-  const CarouselData = [
-    {
-      id: 1,
-      image: asset.slider1,
-      heading: "Wizkid made in lagos tour",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    },
-    {
-      id: 2,
-      image: asset.slider1,
-      heading: "Hablu Programmer Is The Best",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    },
-    {
-      id: 3,
-      image: asset.slider1,
-      heading: "We Learning Full Stack Web Development",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    },
-  ];
+const Carusol = ({newtitle, data, head}) => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const dotHandle = (index) => {
@@ -32,23 +13,23 @@ const Carusol = () => {
 
   const prevhandleClick = () => {
     setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + CarouselData.length) % CarouselData.length  
+      (prevIndex - 1 + data.length) % data.length  
     );
   };
 
   const nextHanleClick = () => {
     setCurrentIndex((nextIndex) =>
-      nextIndex === CarouselData.length - 1 ? 0 : nextIndex + 1
+      nextIndex === data.length - 1 ? 0 : nextIndex + 1
     );
   };
 
-  const carosolSlider = CarouselData[currentIndex];
+  const carosolSlider = data[currentIndex];
   return (
-    <section className="w-full lg:w-full h-[995px] lg:h-[950px] mb-5 lg:mb-0 mx-auto">
+    <section className="w-full lg:w-full h-[995px] lg:h-[850px] mb-5 lg:mb-0 mx-auto">
       <h1 className="text-2xl mt-6 lg:mt-0 lg:text-[42px] font-bold text-center leading-[42px] text-[#26395C]">
-        See How People are Chilling On Chillsbay
+        {head}
       </h1>
-      <div className=" relative max-w-[1241px] h-[789px] mx-[40px] lg:mx-[100px] mt-10">
+      <div className=" relative max-w-[1241px] h-[789px] mx-[40px] lg:mx-[100px] mt-10 ">
         <div className="flex justify-between items-center">
           <button
             onClick={prevhandleClick}
@@ -59,15 +40,16 @@ const Carusol = () => {
           <div className="w-full lg:w-[1027px] lg:h-[700px] lg:pt-12  flex flex-col lg:flex-row">
             <div
               key={carosolSlider.id}
-              className="flex flex-col justify-center items-center"
+              className="flex flex-col justify-center lg:items-start items-center"
             >
+                <h3 className="lg:ms-8 mb-3 lg:mb-5 text-3xl font-bold text-[#26395C]">{ newtitle }</h3>
               <img
                 className="w-[327px]  h-[350px] lg:w-[612px] lg:h-[653px] "
                 src={carosolSlider.image}
                 alt=""
               />
               <div className="lg:hidden flex justify-center  items-center gap-2">
-                {CarouselData.map((_, index) => (
+                {data.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => dotHandle(index)}
@@ -128,7 +110,7 @@ const Carusol = () => {
           </button>
         </div>
         <div className="hidden lg:flex justify-center  items-center gap-2">
-          {CarouselData.map((_, index) => (
+          {data.map((_, index) => (
             <button
               key={index}
               onClick={() => dotHandle(index)}
