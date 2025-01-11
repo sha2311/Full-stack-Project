@@ -11,6 +11,7 @@ const Resturent = ({title}) => {
         })
         .then((jsonData)=>{
             setOpenData(jsonData)
+            console.log(jsonData.img)
         })
    }, [])
   return (
