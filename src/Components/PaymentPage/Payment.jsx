@@ -59,9 +59,9 @@ const Payment = () => {
     setCartItem([...cartItem, newAddItem]);
   };
   return (
-    <section className="flex flex-col lg:flex-row w-[80%] mx-auto mt-24 gap-7">
-      <div className="flex-1 p-6">
-        <h2 className="text-[15px] font-bold text-[#26395C]">Your Cart</h2>
+    <section className="flex flex-col lg:flex-row md:w-[80%] md:mx-auto mt-24 gap-7">
+      <div className="flex-1 md:p-6">
+        <h2 className="text-[15px] ms-5 md:ms-0 font-bold text-[#26395C]">Your Cart</h2>
         {cartItem.map((item) => (
           <div
             key={item.id}
@@ -73,7 +73,7 @@ const Payment = () => {
               alt=""
             />
             <div className="flex-1">
-              <h3 className="text-[#26395C] font-bold text-[22px]">
+              <h3 className="text-[#26395C] font-bold text-nowrap lg:text-wrap md:text-[22px]">
                 {item.title}{" "}
               </h3>
               <div className="flex items-center gap-4 font-bold text-[15px] text-[#26395C] my-3 ">
@@ -95,7 +95,7 @@ const Payment = () => {
 
               {/* Quantity controls */}
 
-              <div className="flex items-center gap-4 mt-4 bg-gray-200 rounded w-[30%] justify-center">
+              <div className="flex items-center gap-4 mt-4 bg-gray-200 rounded md:w-[30%] justify-center">
                 <button
                   onClick={() => incrimentDecriment(item.id, -1)}
                   className="px-2 py-1 hover:bg-[#0E8BFF] w-full rounded duration-300 "
@@ -132,7 +132,7 @@ const Payment = () => {
         ))}
         <button
           onClick={addHandle}
-          className="bg-[#0E8BFF] p-2 rounded-lg text-white font-bold text-sm hover:scale-105"
+          className="bg-[#0E8BFF] p-2 rounded-lg text-white font-bold text-sm ms-32 md:ms-0 hover:scale-105"
         >
           Add New Item
         </button>
