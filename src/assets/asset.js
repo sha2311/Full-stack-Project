@@ -18,7 +18,7 @@ import gallary4 from '../assets/g4.png'
 import gallary5 from '../assets/g5.png'
 import gallary6 from '../assets/g6.png'
 import slider1 from '../assets/slider.png'
-import calendar from '../assets/Calendar.png'
+import calendar from '/public/Calendar.png'
 import mark from '../assets/Mark.png'
 import clock from '../assets/Clock.png'
 import tag from '../assets/Tag.png'
@@ -34,6 +34,10 @@ import google from '../assets/google.png'
 import apple from '../assets/apple.png'
 import drinkCaro from '../assets/DrinkCarosel.png'
 import map from '../assets/map.png'
+import person1 from '../assets/person1.png'
+import person2 from '../assets/person2.png'
+import location from '../assets/Mark.png'
+import check from '../assets/check.png'
 
 
 
@@ -55,7 +59,13 @@ import map from '../assets/map.png'
     google,
     apple ,
     slider1,
-    map
+    map,
+    person1,
+    person2,
+    clock,
+    location,
+    check,
+    calendar,
     
 
  }

@@ -99,9 +99,9 @@ const Navbarmenu = () => {
           </Dropdown>
         </NavbarItem>
         <NavbarItem>
-          <Link className="foreground">
+          <NavLink to='/cart' className="foreground">
             <img src={asset.shopping} alt="" />
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
           {value === true ?  <AccDropModal /> : <AccDropdown />}
@@ -116,7 +116,9 @@ const Navbarmenu = () => {
         <NavbarContent className="w-full" justify="end">
           <NavbarItem className=" hidden lg:flex"> </NavbarItem>
           <NavbarItem>
-            <img className="" src={asset.shopping} alt="" />
+           <NavLink to='/cart'>
+           <img className="" src={asset.shopping} alt="" />
+           </NavLink>
           </NavbarItem>
         </NavbarContent>
         <NavbarMenu>
