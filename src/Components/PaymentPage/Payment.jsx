@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { asset } from "../../assets/asset";
-import { Button } from "@nextui-org/react";
 import Paymodal from "./Paymodal";
 
 const Payment = () => {
@@ -63,7 +62,9 @@ const Payment = () => {
   return (
     <section className="flex flex-col lg:flex-row md:w-[80%] md:mx-auto mt-24 gap-7">
       <div className="flex-1 md:p-6">
-        <h2 className="text-[15px] ms-5 md:ms-0 font-bold text-[#26395C]">Your Cart</h2>
+        <h2 className="text-[15px] ms-5 md:ms-0 font-bold text-[#26395C]">
+          Your Cart
+        </h2>
         {cartItem.map((item) => (
           <div
             key={item.id}
@@ -97,14 +98,17 @@ const Payment = () => {
 
               {/* Quantity controls */}
 
-              <div className="flex items-center gap-4 mt-4 bg-gray-200 rounded md:w-[30%] justify-center">
+              <div className="flex items-center gap-4 mt-4 bg-[#E4E7EC] rounded md:w-[40%] mb-2 justify-center">
                 <button
                   onClick={() => incrimentDecriment(item.id, -1)}
                   className="px-2 py-1 hover:bg-[#0E8BFF] w-full rounded duration-300 "
                 >
                   -
                 </button>
-                <span> {item.quantity} </span>
+                <span className="text-[15px] font-bold text-[#26395C]">
+                  {" "}
+                  {item.quantity}{" "}
+                </span>
                 <button
                   onClick={() => incrimentDecriment(item.id, 1)}
                   className="px-2 py-1 hover:bg-[#0E8BFF] w-full rounded duration-300 "
@@ -112,7 +116,9 @@ const Payment = () => {
                   +
                 </button>
               </div>
-              <p>₦{item.price.toLocaleString()}</p>
+              <p className="text-[#26395C] font-bold">
+                ₦{item.price.toLocaleString()}
+              </p>
             </div>
             <button onClick={() => removeHandle(item.id)}>
               <svg
@@ -139,7 +145,7 @@ const Payment = () => {
           Add New Item
         </button>
       </div>
-        <div className="w-0.5 bg-[#0E8BFF]"></div>
+      <div className="w-0.5 bg-[#0E8BFF]"></div>
       {/* right section */}
       <div className="bg-[#F5FAFF] px-7 py-10">
         <div className="text-[#26395C]">
@@ -159,7 +165,10 @@ const Payment = () => {
           <p className="ms-8 text-sm">+2341123465799</p>
         </div>
         <div className="text-[#26395C]">
-          <h2 onClick={()=>setPaymentINfo(!showPaymentInfo)} className="flex text-xl font-bold gap-2 items-center">
+          <h2
+            onClick={() => setPaymentINfo(!showPaymentInfo)}
+            className="flex text-xl font-bold gap-2 items-center"
+          >
             {" "}
             <img className="size-6" src={asset.check} /> Payment{" "}
             <span className="text-[#969DAA]">card</span>
@@ -210,9 +219,14 @@ const Payment = () => {
         <div className="mt-5">
           <ul>
             {cartItem.map((item) => (
-              <li className="text-[#26395C] text-[15px] mt-1.5 flex justify-between " id={item.id}>
+              <li
+                className="text-[#26395C] text-[15px] mt-1.5 flex justify-between "
+                id={item.id}
+              >
                 <span>{item.title}</span>
-                <span className="font-bold ">₦ {item.price.toLocaleString()} </span>
+                <span className="font-bold ">
+                  ₦ {item.price.toLocaleString()}{" "}
+                </span>
               </li>
             ))}
           </ul>
@@ -220,31 +234,34 @@ const Payment = () => {
         <div className="text-[#26395C] text-[15px] flex justify-between my-1  border-t-1.5 border-[#E4E7EC]">
           <span className="mt-1"> Subtotal</span>
           <span className="font-bold mt-1">
-          ₦ {cartItem
+            ₦{" "}
+            {cartItem
               .reduce((sum, item) => sum + item.price, 0)
               .toLocaleString()}
           </span>
         </div>
-        <div className="text-[#26395C] text-[15px] flex justify-between my-1" >
+        <div className="text-[#26395C] text-[15px] flex justify-between my-1">
           <span>Vat(2%)</span>
           <span className="font-bold">
-          ₦ {(
+            ₦{" "}
+            {(
               cartItem.reduce((sum, item) => sum + item.price, 0) * 0.2
             ).toLocaleString()}{" "}
           </span>
         </div>
-        <div className="text-[#26395C] text-[15px] flex justify-between my-1  border-t-1.5 border-[#E4E7EC] " >
+        <div className="text-[#26395C] text-[15px] flex justify-between my-1  border-t-1.5 border-[#E4E7EC] ">
           <span className="font-medium">Total </span>
-          <span className="font-bold" >
+          <span className="font-bold">
             {" "}
-            ₦ {(
+            ₦{" "}
+            {(
               cartItem.reduce((sum, item) => sum + item.price, 0) * 1.02
             ).toLocaleString()}{" "}
           </span>
         </div>
-            <div>
-              <Paymodal/>
-            </div>
+        <div>
+          <Paymodal />
+        </div>
       </div>
     </section>
   );

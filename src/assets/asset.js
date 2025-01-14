@@ -38,6 +38,12 @@ import person1 from '../assets/person1.png'
 import person2 from '../assets/person2.png'
 import location from '../assets/Mark.png'
 import check from '../assets/check.png'
+import phones from '../assets/phone.png'
+import email from '../assets/email.png'
+import help from '../assets/help.png'
+import Influencer from '../assets/Influencer.png'
+import refund from '../assets/refund.png'
+
 
 
 
@@ -66,6 +72,8 @@ import check from '../assets/check.png'
     location,
     check,
     calendar,
+    phones,
+    email
     
 
  }
@@ -182,3 +190,28 @@ export const TagData = [
       des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   ];
+
+  export const contactData = [
+    {
+      img: Influencer,
+      heading: "Become an Influencer",
+      description:
+        "Join a company that’s passionate about design and technology.",
+      website: "chills@chillsbay.com",
+    },
+    {
+      img: help,
+      heading: "Need help?",
+      description:
+        "Join a company that’s passionate about design and technology.",
+      website: 'chills@chillsbay.com',
+    },
+    {
+      img: refund,
+      heading: "Refunds & Others",
+      description:
+        "Join a company that’s passionate about design and technology.",
+      website: "chills@chillsbay.com",
+    }
+  ]
+

@@ -107,7 +107,9 @@ const Navbarmenu = () => {
           {value === true ?  <AccDropModal /> : <AccDropdown />}
         </NavbarItem>
         <NavbarItem>
-          <Button color="primary">Contact Now</Button>
+         <NavLink to='/contact'>
+         <button className="bg-[#0E8BFF] p-2 rounded-lg text-white font-bold text-sm ms-32 md:ms-0 hover:scale-105" color="primary">Contact Now</button>
+         </NavLink>
         </NavbarItem>
       </NavbarContent>
 
