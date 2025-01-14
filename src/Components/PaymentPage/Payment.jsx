@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { asset } from "../../assets/asset";
+import { Button } from "@nextui-org/react";
+import Paymodal from "./Paymodal";
 
 const Payment = () => {
   const [showPaymentInfo, setPaymentINfo] = useState(true);
@@ -240,6 +242,9 @@ const Payment = () => {
             ).toLocaleString()}{" "}
           </span>
         </div>
+            <div>
+              <Paymodal/>
+            </div>
       </div>
     </section>
   );
