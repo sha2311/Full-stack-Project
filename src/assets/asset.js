@@ -43,6 +43,7 @@ import email from '../assets/email.png'
 import help from '../assets/help.png'
 import Influencer from '../assets/Influencer.png'
 import refund from '../assets/refund.png'
+import map2 from '../assets/map2.png'
 
 
 
@@ -73,7 +74,8 @@ import refund from '../assets/refund.png'
     check,
     calendar,
     phones,
-    email
+    email,
+    map2
     
 
  }
@@ -215,3 +217,23 @@ export const TagData = [
     }
   ]
 
+  export const ClubData = [
+    {
+      id: 1,
+      image: person1,
+      heading: "GTCO Food and Drink Festival 2022: Africa’s Biggest Food and Drink Festival",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+    },
+    {
+      id: 2,
+      image: person1,
+      heading: "Highlights of the GTCO Food and Drink Festival 2022: Culinary Excellence Meets Culture",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    },
+    {
+      id: 3,
+      image: drinkCaro,
+      heading: "Exploring Innovation and Trends at the GTCO Food and Drink Festival 2022",
+      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+  ];

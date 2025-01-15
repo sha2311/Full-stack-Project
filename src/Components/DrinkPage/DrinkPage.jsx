@@ -11,7 +11,7 @@ const DrinkPage = () => {
     <main className='w-full mx-auto'>
     <DrinkHero/>
     <FindDrink/>
-    <Resturent title="Popular restaurants in Lagos" />
+    <Resturent api="./data.json" title="Popular restaurants in Lagos" />
     <Carusol newtitle='Upcoming Eat & Drink Events' data={drinkData} tags={TagData} />
     <Resturent title="Resturants nearby" />
     <Map/>

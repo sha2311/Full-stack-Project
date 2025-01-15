@@ -1,10 +1,9 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { TagData, asset } from "../../assets/asset";
-import { Button } from "@nextui-org/react";
+import { Button, cn } from "@nextui-org/react";
 import { useState } from "react";
 
-const Carusol = ({newtitle, data, head}) => {
-
+const Carusol = ({ newtitle, data, head, isDark }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const dotHandle = (index) => {
@@ -12,9 +11,7 @@ const Carusol = ({newtitle, data, head}) => {
   };
 
   const prevhandleClick = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + data.length) % data.length  
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
 
   const nextHanleClick = () => {
@@ -33,7 +30,10 @@ const Carusol = ({newtitle, data, head}) => {
         <div className="flex justify-between items-center">
           <button
             onClick={prevhandleClick}
-            className="absolute left-0 transform -translate-x-10 flex items-center justify-center  text-black rounded-full w-12 h-12"
+            className={cn(
+              "absolute text-black left-0 transform -translate-x-10 flex items-center justify-center   rounded-full w-12 h-12",
+              isDark && "text-white"
+            )}
           >
             <FaArrowLeft />
           </button>
@@ -42,9 +42,19 @@ const Carusol = ({newtitle, data, head}) => {
               key={carosolSlider.id}
               className="flex flex-col justify-center lg:items-start items-center"
             >
-                <h3 className="lg:ms-8 mb-3 lg:mb-5 text-3xl font-bold text-[#26395C]">{ newtitle }</h3>
+              <h3
+                className={cn(
+                  "lg:ms-8 mb-3 lg:mb-5 text-3xl font-bold",
+                  isDark ? "text-white" : "text-[#26395C]"
+                )}
+              >
+                {newtitle}
+              </h3>
               <img
-                className="w-[327px]  h-[350px] lg:w-[612px] lg:h-[653px] "
+                className={cn(
+                  "w-[327px]  h-[350px] lg:w-[612px] lg:h-[653px] ",
+                  isDark && "p-5"
+                )}
                 src={carosolSlider.image}
                 alt=""
               />
@@ -61,15 +71,24 @@ const Carusol = ({newtitle, data, head}) => {
               </div>
             </div>
             <div className="lg:w-[385px] lg:h-[550px] text-center lg:text-start  mt-10 ">
-              <h2 className="text-2xl lg:text-[42px]  lg:leading-[54px] text-[#26395C] font-bold">
+              <h2
+                className={cn(
+                  "text-2xl lg:text-[42px] lg:leading-[54px] font-bold",
+                  isDark ? "text-white pt-8" : "text-[#26395C] "
+                )}
+              >
                 {" "}
                 {carosolSlider.heading}{" "}
               </h2>
-              <p className=" text-xl text-[#26395C] py-3 lg:py-5">
+              <p
+                className={cn(
+                  " text-xl py-3 lg:py-5",
+                  isDark ? "text-white" : "text-[#26395C] "
+                )}
+              >
                 {" "}
                 {carosolSlider.des}{" "}
               </p>
-
               <div className="flex justify-center lg:justify-normal">
                 <div className="grid grid-cols-2 gap-5 mt-3 lg:ms-0 ">
                   {TagData.map((value) => (
@@ -93,7 +112,14 @@ const Carusol = ({newtitle, data, head}) => {
               </div>
 
               <div className="flex justify-center lg:justify-normal gap-3 mt-7">
-                <p className="text-[#26395C] text-xl">Connect with us on:</p>
+                <p
+                  className={cn(
+                    "text-[#26395C] text-xl",
+                    isDark && "text-white"
+                  )}
+                >
+                  Connect with us on:
+                </p>
                 <div className="flex items-center gap-3">
                   <img className=" size-[24px]" src={asset.twitter} alt="" />
                   <img className=" size-[24px]" src={asset.instragram} alt="" />
@@ -104,7 +130,10 @@ const Carusol = ({newtitle, data, head}) => {
 
           <button
             onClick={nextHanleClick}
-            className="absolute right-0 transform translate-x-10 flex items-center justify-center  text-black rounded-full w-12 h-12"
+            className={cn(
+              "absolute right-0 transform translate-x-10 flex items-center justify-center  text-black rounded-full w-12 h-12",
+              isDark && "text-white"
+            )}
           >
             <FaArrowRight />
           </button>

@@ -6,6 +6,7 @@ import { NavLink } from "react-router";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import {
   Button,
+  cn,
   Dropdown,
   DropdownItem,
   DropdownMenu,
@@ -20,14 +21,16 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import { themeColor } from "../lib/utlits";
+import { ShoppingNav } from "./Common/icon";
 
 const value = true;
 
-const Navbarmenu = () => {
+const Navbarmenu = ({ isDark }) => {
   const [isMenuOpen, setIsMenuOpen] = useState();
   const menuItem = [
     { name: "Eat & Drink", path: "/drink" },
-    { name: "Club", path: "/" },
+    { name: "Club", path: "/club" },
     { name: "Shoping", path: "/cart" },
     { name: "Account", path: "/" },
     { name: "Contact", path: "/contact" },
@@ -37,6 +40,7 @@ const Navbarmenu = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="2xl"
+      className={themeColor(isDark)}
     >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
@@ -66,24 +70,23 @@ const Navbarmenu = () => {
           </NavLink>
         </NavbarBrand>
         <NavbarItem>
-          <NavLink to="/drink" className="text-black ">
+          <NavLink to="/drink" className={ isDark ? " text-white" : "text-black"} >
             Eat & Drink
           </NavLink>
         </NavbarItem>
 
         <NavbarItem className="ps-6">
-          <Link className="text-black ">
+          <NavLink to='/club 'className={isDark ? "text-white": "text-black"}>
             {" "}
-            Club <sup className=" text-[8px] text-[#0E8BFF] "> +HOT </sup>{" "}
-          </Link>
+            Club <sup className={cn("text-[8px]", isDark ? "text-pink-500" : "text-[#0E8BFF]")}> +HOT </sup>{" "}
+          </NavLink>
         </NavbarItem>
 
         <NavbarItem>
-          <Dropdown>
+          <Dropdown className={isDark ? "bg-slate-800 text-white" : ""}>
             <DropdownTrigger>
               <Button variant="none">
-                {" "}
-                Things to do{" "}
+                Things to do
                 <ChevronDownIcon className="w-4 h-4 text-[#0E8BFF] " />{" "}
               </Button>
             </DropdownTrigger>
@@ -102,11 +105,11 @@ const Navbarmenu = () => {
         </NavbarItem>
         <NavbarItem>
           <NavLink to="/cart" className="foreground">
-            <img src={asset.shopping} alt="" />
+           <ShoppingNav isDark={isDark} />
           </NavLink>
         </NavbarItem>
         <NavbarItem>
-          {value === true ? <AccDropModal /> : <AccDropdown />}
+          {value === true ? <AccDropModal isDark = {isDark} /> : <AccDropdown />}
         </NavbarItem>
         <NavbarItem>
           <NavLink to="/contact">
